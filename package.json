@@ -2,8 +2,9 @@
   "name": "notes-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/server.ts",
   "scripts": {
+    "build": "tsc",
     "dev": "ts-node-dev src/server.ts",
     "start": "node build/server.js",
     "tsc": "tsc",
