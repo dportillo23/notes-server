@@ -1,10 +1,17 @@
 import express, { Response, Request } from "express";
+import cors, { CorsOptions } from 'cors'
 import httpStatus from "http-status";
 import notesRouter from "./modules/notes/notes.routes";
 
 const app = express();
 
 app.use(express.json());
+
+const corsOptions: CorsOptions = {
+  origin: 'http://localhost:5173'
+};
+
+app.use(cors(corsOptions));
 
 const port = process.env.PORT ?? 3000;
 
